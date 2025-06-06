@@ -1,4 +1,18 @@
+import { useEffect } from "react";
+import { getAllHoliday } from "../api/holiday";
 export default function Carosel() {
+  const fetchHoliday = async () => {
+    try {
+      const response = await getAllHoliday();
+      console.log(response);
+    } catch (error) {
+      console.log("Recupero vacanze fallito", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchHoliday();
+  }, []);
   return (
     <>
       <div id="carouselExampleCaptions" className="carousel slide">
