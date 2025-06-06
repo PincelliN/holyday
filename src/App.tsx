@@ -6,7 +6,7 @@ import Carosel from "./components/carosel";
 function App() {
   return (
     <div className="App">
-      <h1>Le Nostre vacanze</h1>
+      <h1 className="text-white">Le Nostre vacanze</h1>
       <Carosel />
     </div>
   );
